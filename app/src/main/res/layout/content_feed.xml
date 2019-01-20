@@ -7,6 +7,7 @@
         tools:showIn="@layout/activity_feed"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="60dp"
         tools:context=".FeedActivity">
 
     <android.support.v7.widget.RecyclerView
