@@ -1,7 +1,12 @@
 package com.example.doldr.kode_task_5
 
+
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,5 +16,24 @@ class MainActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         actionBar!!.hide()
+
+        btn_login.setOnClickListener {
+            val login = txt_login.text.toString()
+            val password = txt_password.text.toString()
+            if (login == "test" && password == "test"){
+                //intent = Intent(this,FeedActivity::class.java)
+                //startActivity(intent)
+            }
+            else if(login != "test"&&password != "test")
+                Snackbar.make(it,"Неверный логин или пароль",Snackbar.LENGTH_LONG).show()
+            else if(login == "")
+                Snackbar.make(it,"Введите логин",Snackbar.LENGTH_LONG).show()
+            else if(password == "")
+                Snackbar.make(it,"Введите пароль",Snackbar.LENGTH_LONG).show()
+            else if(login == "" && password == "")
+                Snackbar.make(it,"Введите что-нибудь",Snackbar.LENGTH_LONG).show()
+        }
+
+
     }
 }
