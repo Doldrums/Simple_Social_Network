@@ -69,16 +69,13 @@ class FeedActivity : AppCompatActivity() {
         lateinit var itemView : View
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
             i++
-            if (what ==2) {
-                if (i % 2 == 0) {
-                    itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_notification, parent, false)
-                } else {
-                    itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+            when (what) {
+                2 -> when {
+                    i % 2 == 0 -> itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_notification, parent, false)
+                    else -> itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
                 }
-            } else if (what == 1) {
-                itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
-            } else if (what == 3) {
-                itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_notification, parent, false)
+                1 -> itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
+                3 -> itemView = LayoutInflater.from(parent.context).inflate(R.layout.list_notification, parent, false)
             }
             return  ViewHolder(itemView)
 
