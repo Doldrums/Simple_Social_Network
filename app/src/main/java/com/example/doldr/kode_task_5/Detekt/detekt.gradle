@@ -1,0 +1,12 @@
+apply plugin: "io.gitlab.arturbosch.detekt"
+
+detekt {
+    version = "1.0.0.RC8"
+    profile("main") {
+        input = "$projectDir"
+        config = "$project.rootDir/app/src/main/java/com/example/doldr/kode_task_5/Detekt/detekt-ruleset.yml"
+        filters = ".*test.*,.*/resources/.*,.*/tmp/.*"
+        output = "${project.buildDir}/reports/detekt.xml"
+        parallel = true
+    }
+}
