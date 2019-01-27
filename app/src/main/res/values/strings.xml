@@ -9,6 +9,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="hint_login">login</string>
     <string name="hint_password">password</string>
+    <string name="hint_title">title</string>
+    <string name="hint_text">text</string>
     <string name="title_login">Sign In</string>
     <string name="example_date">20.01.2019 20:47</string>
     <string name="example_title">Christmas Cakes</string>
