@@ -3,6 +3,7 @@ package com.example.doldr.kode_task_5
 import android.media.Image
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
@@ -10,9 +11,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_feed.*
+import kotlinx.android.synthetic.main.dialog_view.*
 
 class FeedActivity : AppCompatActivity() {
+
+    var title : String = ""
+    var text_item : String = ""
 
 
 
@@ -25,14 +31,10 @@ class FeedActivity : AppCompatActivity() {
         name.add("Christmas Cakes")
         name.add("Christmas Cakes")
         name.add("Christmas Cakes")
-        name.add("Christmas Cakes")
-        name.add("Christmas Cakes")
-        name.add("Christmas Cakes")
-        name.add("Christmas Cakes")
-        name.add("Christmas Cakes")
-        name.add("Christmas Cakes")
-        name.add("Christmas Cakes")
-        name.add("Christmas Cakes")
+
+        var text = mutableListOf<String>()
+        text.add("Such cakes conquer not only with their taste, but also with the decoration process, to which you can attract the whole family, including the youngest children.")
+        text.add("Such cakes conquer not only with their taste, but also with the decoration process, to which you can attract the whole family, including the youngest children.")
 
         val recyclerView: RecyclerView = findViewById(R.id.my_recycler_view)
 
@@ -58,6 +60,30 @@ class FeedActivity : AppCompatActivity() {
                 }
             }
             false
+        }
+
+        fab_Add.setOnClickListener {
+            val builder = AlertDialog.Builder(this@FeedActivity)
+            builder.setTitle("Add new entry")
+            builder.setView(R.layout.dialog_view)
+
+
+            builder.setPositiveButton("Create"){dialog, which ->
+                title = txt_title.text.toString()
+                text_item = txt_text.text.toString()
+
+                name.add(title)
+                text.add(text_item)
+
+                Toast.makeText(applicationContext,"Ok. New record added!",Toast.LENGTH_SHORT).show()
+            }
+            builder.setNeutralButton("Cancel"){_,_ ->
+                Toast.makeText(applicationContext,"You cancelled the dialog.", Toast.LENGTH_SHORT).show()
+            }
+
+
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
         }
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
