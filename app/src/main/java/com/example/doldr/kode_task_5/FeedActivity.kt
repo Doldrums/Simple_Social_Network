@@ -17,8 +17,8 @@ import kotlinx.android.synthetic.main.dialog_view.*
 
 class FeedActivity : AppCompatActivity() {
 
-    var title : String = ""
-    var text_item : String = ""
+    var title : String = "test"
+    var description : String = "test"
 
 
 
@@ -27,7 +27,7 @@ class FeedActivity : AppCompatActivity() {
         setContentView(R.layout.activity_feed)
         setSupportActionBar(toolbar)
 
-        val name = mutableListOf<String>()
+        var name = mutableListOf<String>()
         name.add("Christmas Cakes")
         name.add("Christmas Cakes")
         name.add("Christmas Cakes")
@@ -64,16 +64,18 @@ class FeedActivity : AppCompatActivity() {
 
         fab_Add.setOnClickListener {
             val builder = AlertDialog.Builder(this@FeedActivity)
-            builder.setTitle("Add new entry")
-            builder.setView(R.layout.dialog_view)
+            builder .setTitle("Add new entry")
+                    .setView(R.layout.dialog_view)
+
+
 
 
             builder.setPositiveButton("Create"){dialog, which ->
-                title = txt_title.text.toString()
-                text_item = txt_text.text.toString()
+                title = txt_title?.text.toString()
+                description = txt_text?.text.toString()
 
                 name.add(title)
-                text.add(text_item)
+                text.add(description)
 
                 Toast.makeText(applicationContext,"Ok. New record added!",Toast.LENGTH_SHORT).show()
             }
@@ -81,9 +83,10 @@ class FeedActivity : AppCompatActivity() {
                 Toast.makeText(applicationContext,"You cancelled the dialog.", Toast.LENGTH_SHORT).show()
             }
 
-
             val dialog: AlertDialog = builder.create()
             dialog.show()
+
+
         }
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
