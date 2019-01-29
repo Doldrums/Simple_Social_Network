@@ -6,16 +6,13 @@ The last one uses bottom navigation bar for switching types of news(Feed, Dashbo
 
 
 #### Screenshots are presented below:
-![Login Screen](https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/Ll_PUd9_1tg.jpg)
-#
-![Feed Screen](https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/T1Emouczc3I.jpg)
-#
-![Feed Screen](https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/5HmBmsUwbNo.jpg)
-#
-![Notification Screen](https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/3RG7FmGlbC4.jpg)
-#
-![Notification Screen](https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/sx00vcdwQnk.jpg)
-#
-![Dashboard Screen](https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/YSPrDHQFpak.jpg)
-#
-![Dashboard Screen](https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/gcCuuiQB1VU.jpg)
+<p>
+<img src="https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/one.jpg" width="200" height="350" />
+<img src="https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/two.jpg" width="200" height="350" />
+<img src="https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/three.jpg" width="200" height="350" />
+<img src="https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/four.jpg" width="200" height="350" />
+<img src="https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/five.jpg" width="200" height="350" />
+<img src="https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/six.jpg" width="200" height="350" />
+<img src="https://github.com/Doldrums/Simple_Social_Network/blob/master/app/src/main/res/drawable/seven.jpg" width="200" height="350" />
+</p>
+
