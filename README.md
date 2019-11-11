@@ -21,7 +21,7 @@ The last one uses bottom navigation bar for switching types of news(Feed, Dashbo
 #### Installation
 Clone this repository and import into **Android Studio**
 ```bash
-git clone git@github.com:wolox/<reponame>.git
+git clone https://github.com/Doldrums/Simple_Social_Network.git
 ```
 #### Build variants
 Use the Android Studio *Build Variants* button to choose between **production** and **staging** flavors combined with debug and release build types
